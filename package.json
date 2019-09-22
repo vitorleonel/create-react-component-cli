@@ -1,9 +1,9 @@
 {
-  "name": "react-components",
+  "name": "create-react-component-cli",
   "version": "0.0.1",
   "description": "A CLI for generate react and react-native components based on styled-components.",
   "bin": {
-    "react-components": "bin/react-components"
+    "create-react-component": "bin/create-react-component"
   },
   "scripts": {
     "format": "prettier --write **/*.{js,json} && standard --fix",

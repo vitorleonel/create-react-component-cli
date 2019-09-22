@@ -1,10 +1,10 @@
-# Plugin guide for react-components
+# Plugin guide for create-react-component
 
-Plugins allow you to add features to react-components, such as commands and
+Plugins allow you to add features to create-react-component, such as commands and
 extensions to the `toolbox` object that provides the majority of the functionality
-used by react-components.
+used by create-react-component.
 
-Creating a react-components plugin is easy. Just create a repo with two folders:
+Creating a create-react-component plugin is easy. Just create a repo with two folders:
 
 ```
 commands/
@@ -17,7 +17,7 @@ A command is a file that looks something like this:
 // commands/foo.js
 
 module.exports = {
-  run: (toolbox) => {
+  run: toolbox => {
     const { print, filesystem } = toolbox
 
     const desktopDirectories = filesystem.subdirectories(`~/Desktop`)
@@ -31,10 +31,12 @@ An extension lets you add additional features to the `toolbox`.
 ```js
 // extensions/bar-extension.js
 
-module.exports = (toolbox) => {
+module.exports = toolbox => {
   const { print } = toolbox
 
-  toolbox.bar = () => { print.info('Bar!') }
+  toolbox.bar = () => {
+    print.info('Bar!')
+  }
 }
 ```
 
@@ -42,6 +44,6 @@ This is then accessible in your plugin's commands as `toolbox.bar`.
 
 # Loading a plugin
 
-To load a particular plugin (which has to start with `react-components-*`),
-install it to your project using `npm install --save-dev react-components-PLUGINNAME`,
-and react-components will pick it up automatically.
+To load a particular plugin (which has to start with `create-react-component-*`),
+install it to your project using `npm install --save-dev create-react-component-PLUGINNAME`,
+and create-react-component will pick it up automatically.

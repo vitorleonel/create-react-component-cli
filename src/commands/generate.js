@@ -2,7 +2,7 @@ module.exports = {
   name: 'generate',
   alias: ['g'],
   description:
-    'Generate a new component with specified name. Ex: `react-components g components/App`.',
+    'Generate a new component with specified name. Ex: `create-react-component g components/App`.',
   run: async toolbox => {
     const {
       parameters,
