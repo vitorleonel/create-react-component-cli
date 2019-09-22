@@ -18,21 +18,21 @@ module.exports = {
       return
     }
 
-    // Set values ​​to generate component.
+    // Set values to generate component.
     const componentName = name.includes('/') ? name.split('/').pop() : name
     const platform = parameters.options.hasOwnProperty('rn') ? 'rn' : 'rjs'
     const withStyles = parameters.options.hasOwnProperty('styles')
 
     // Generate the component based on variable values.
     await generate({
-      template: `component.${platform}.js`,
+      template: `component.${platform}.ejs`,
       target: `${name}/index.js`,
       props: { name: componentName }
     })
 
     if (withStyles) {
       await generate({
-        template: `styles.${platform}.js`,
+        template: `styles.${platform}.ejs`,
         target: `${name}/styles.js`
       })
     }

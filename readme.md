@@ -1,10 +1,6 @@
-# react-components CLI
+# React Components CLI
 
-A CLI for react-components.
-
-## Customizing your CLI
-
-Check out the documentation at https://github.com/infinitered/gluegun/tree/master/docs.
+A CLI for generate react and react-native components based on styled-components.
 
 ## Publishing to NPM
 
